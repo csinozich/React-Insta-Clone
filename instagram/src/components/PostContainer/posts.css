@@ -1,0 +1,36 @@
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.post-container {
+  width: 50%;
+  height: 100%;
+  margin: 30px auto;
+  padding: 20px 0;
+  border: 1px solid lightgray;
+}
+
+.post-header {
+  display: flex;
+  margin-bottom: 10px
+}
+
+.main-image {
+  width: 100%;
+}
+
+.thumbnail-img {
+  height: 10%;
+  width: 10%;
+  border-radius: 50%;
+  margin: 0px 20px 5px;
+}
+
+.header-username {
+  padding-top: 5px;
+}
+
+.username {
+  font-weight: bold;
+}

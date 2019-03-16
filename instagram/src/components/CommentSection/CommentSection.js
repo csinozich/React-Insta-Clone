@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import CommentInput from './CommentInput'
+import CommentInput from './CommentInput';
 
 
 const CommentSection = props => {
   return (
-    <div>
+    <div className='comment-section'>
       {props.comments.map((comment, index) =>
         <Comment comment={comment} key={index}/>
       )}

@@ -1,0 +1,23 @@
+.comment {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -15px;
+}
+
+input {
+  height: 20px;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-top: 1px solid lightgray;
+  padding: 15px 0 5px;
+  font-size: 14px;
+}
+
+input:active {
+  outline: none;
+}
+
+.comment-section {
+  padding-left: 10px;
+}

@@ -2,10 +2,12 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection'
 import Post from './Post'
 import PropTypes from 'prop-types'
+import './posts.css'
+import '../CommentSection/comments.css'
 
 const PostContainer = props => {
   return (
-      <div>
+      <div className='post-container'>
         <Post key={props.index} post={props.post} />
         {console.log(props.post)}
         <CommentSection comments={props.post.comments} />
