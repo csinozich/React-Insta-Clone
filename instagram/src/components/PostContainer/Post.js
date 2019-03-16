@@ -1,13 +1,11 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection'
 import PostHeader from './PostHeader'
 
 const Post = props => {
   return (
     <div>
-      <PostHeader username={props.username} thumbnailURL={props.thumbnailUrl} />
-      <img alt='thumbnail' src={props.imageUrl} />
-      <CommentSection comments={props.comments} />
+      <PostHeader username={props.post.username} thumbnailUrl={props.post.thumbnailUrl} />
+      <img alt='thumbnail' src={props.post.imageUrl} />
     </div>
   )
 }

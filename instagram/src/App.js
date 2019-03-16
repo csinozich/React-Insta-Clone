@@ -14,7 +14,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <PostContainer instaPosts={this.state.instaPosts}/>
+      {this.state.instaPosts.map((post, index) => { return(
+        <PostContainer key={index} post={post}/>
+      )
+      })}
       </div>
     );
   }

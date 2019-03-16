@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 
 const PostContainer = props => {
   return (
-    <div>
-      {props.instaPosts.map(post => (
-        <Post key={props.instaPosts.thumbnailUrl} post={props.instaPosts} />
-      ))}
-    </div>
+      <div>
+        <Post key={props.index} post={props.post} />
+        {console.log(props.post)}
+        <CommentSection comments={props.post.comments} />
+      </div>
   )
 }
 
