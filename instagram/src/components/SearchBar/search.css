@@ -1,0 +1,47 @@
+.search-container {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ig-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.camera {
+  height: 60px;
+  padding-right: 20px;
+  border-right: 1px solid lightgray;
+}
+
+.logo {
+  height: 70px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.icon-container {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-icons {
+  height: 25px;
+}
+
+.person {
+  height: 45px;
+  margin-top: -10px;
+}
+
+.search-input {
+  border: 1px solid lightgray;
+  width: 30%;
+  margin: 0;
+  padding-bottom: 15px;
+  padding-left: 10px;
+}
