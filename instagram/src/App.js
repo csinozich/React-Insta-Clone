@@ -9,7 +9,8 @@ class App extends React.Component {
     super();
     this.state = {
       instaPosts: [],
-      filteredInstaPosts: []
+      filteredInstaPosts: [],
+      searchTerm: ''
     }
   }
 
@@ -17,19 +18,21 @@ class App extends React.Component {
     this.setState({instaPosts: dummyData})
   }
 
-  searchHandler = event => {
-    const instaPosts= this.state.instaPosts.filter(post => {
-      if (post.username.includes(event.target.value)) {
-        return post;
-      }
-    });
-    this.setState({filteredInstaPosts: instaPosts})
+  searchChangeHandler = event => {
+    this.setState({value: event.target.value})
+  }
+
+  searchSubmitHandler = event => {
+    this.setState((prevState) => {
+          const filteredArray = prevState.instaPosts.filter(post => post.username.includes(prevState.searchInput))
+          return {filteredInstaPosts: filteredArray}
+      })
   }
 
   render() {
     return (
       <div className="App">
-        <Search searchTerm={this.state.searchTerm} searchPosts={this.searchHandler}/>
+        <Search searchTerm={this.state.searchTerm} searchPosts={this.searchSubmitHandler}/>
         <PostContainer instaPosts={
           this.state.filteredInstaPosts.length > 0 ? this.state.filteredInstaPosts : this.state.instaPosts} />
       </div>

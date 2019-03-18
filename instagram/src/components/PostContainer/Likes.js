@@ -5,12 +5,12 @@ import './posts.css'
 
 const Likes = props => {
   return (
-    <div>
+    <div className='likes-container'>
       <div className='likes-icons'>
-        <img className='likes-heart' src= {Heart} onClick={props.addLike}/>
-        <img className='likes-comment' src={CommentIcon} />
+        <img className='likes-heart' alt='likes heart' src= {Heart} onClick={props.addLike}/>
+        <img className='likes-comment' alt='comment icon' src={CommentIcon} />
       </div>
-      <p className='likes-container' key='likes-container'>{props.likes}</p>
+      <p className='likes-container username' key='likes-container'>{props.likes} likes</p>
     </div>
   )
 }

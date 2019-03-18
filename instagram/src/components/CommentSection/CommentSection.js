@@ -7,17 +7,17 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments,
+      comments: props.post.comments,
       comment: ''
     }
     console.log(this.state.comments)
   }
 
   componentDidMount() {
-    const id = this.props.index;
+    const id = this.props.post.timestamp;
     if (localStorage.getItem(id)) {
       this.setState({
-        comments: JSON.parse(localStorage.getItem(this.props.index))
+        comments: JSON.parse(localStorage.getItem(this.props.post.timestamp))
       })}
     else {
       this.setComment();
@@ -30,7 +30,7 @@ class CommentSection extends React.Component {
 
   setComment = () => {
     localStorage.setItem(
-      this.props.index,
+      this.props.post.timestamp,
       JSON.stringify(this.state.comments)
     )
   }
@@ -50,8 +50,11 @@ class CommentSection extends React.Component {
 
   render() {
     return(
-      <div>
-        {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
+      <div className='comment-section'>
+        <div className='comments'>
+        {console.log(this.state.comments)}
+          {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
+        </div>
         <CommentInput
           comment = {this.state.comment}
           submitHandler = {this.submitHandler}

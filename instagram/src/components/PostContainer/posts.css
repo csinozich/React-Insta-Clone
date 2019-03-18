@@ -8,16 +8,22 @@ p {
   height: 100%;
   margin: 30px auto;
   padding: 20px 0;
-  border: 1px solid lightgray;
 }
 
 .post {
-  margin: 50px 0;
+  margin: 30px 0;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+}
+
+.post:first-of-type {
+  margin: 0;
 }
 
 .post-header {
   display: flex;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  padding: 20px 0 0;
 }
 
 .main-image {
@@ -37,6 +43,11 @@ p {
 
 .username {
   font-weight: bold;
+}
+
+.likes-container {
+  padding-left: 7px;
+  margin: 0;
 }
 
 .likes-heart {

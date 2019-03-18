@@ -6,11 +6,11 @@
 
 input {
   height: 20px;
-  width: 100%;
+  width: 90%;
   margin-top: 10px;
   border: none;
   border-top: 1px solid lightgray;
-  padding: 15px 0 5px;
+  padding: 15px 0 15px 5px;
   font-size: 14px;
 }
 
@@ -19,5 +19,5 @@ input:active {
 }
 
 .comment-section {
-  padding-left: 10px;
+  padding-left: 15px;
 }

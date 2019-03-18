@@ -23,7 +23,7 @@ class Post extends React.Component {
         <PostHeader username={this.props.post.username} thumbnailUrl={this.props.post.thumbnailUrl}/>
         <img className='main-image' alt='thumbnail' src={this.props.post.imageUrl} />
         <Likes addLike={this.addLike} likes={this.state.likes} />
-        <CommentSection id={this.props.post.imageUrl} comments={this.props.post.comments} />
+        <CommentSection id={this.props.post.imageUrl} post={this.props.post} comments={this.props.post.comments} />
       </div>
     )
   }
