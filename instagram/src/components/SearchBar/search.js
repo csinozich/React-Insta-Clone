@@ -15,7 +15,7 @@ const Search = props => {
         <img className='camera' alt='camera logo' src={Camera} />
         <img className='logo' alt='insta logo' src={InstaLogo} />
       </div>
-        <input className='search-input' name='searchTerm' type='text' value={props.searchTerm} placeholder='Search' onChange={props.searchChangeHandler} onKeyDown={props.searchSubmitHandler}/>
+        <input className='search-input' name='searchTerm' type='text' value={props.searchTerm} placeholder='Search' onChange={props.searchHandler} />
       <div className='icon-container'>
         <img className='search-icons' alt='compass' src={Compass} />
         <img className='search-icons' alt='heart' src={Heart} />
