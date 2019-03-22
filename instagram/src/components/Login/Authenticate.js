@@ -1,6 +1,6 @@
 import React from 'react';
 
-const withAuthenticator = ImagesPage => Login => {
+const Authenticate = ImagesPage => Login => {
   class Authenticator extends React.Component {
     constructor(props) {
       super(props);
@@ -27,4 +27,4 @@ const withAuthenticator = ImagesPage => Login => {
   }
 };
 
-export default withAuthenticator;
+export default Authenticate;

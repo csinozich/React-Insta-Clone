@@ -27,7 +27,3 @@ PostContainer.propTypes = {
 
 
 export default PostContainer
-
-
-
-//66.155.35.240

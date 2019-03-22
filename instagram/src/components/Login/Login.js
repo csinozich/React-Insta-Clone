@@ -24,7 +24,7 @@ class Login extends React.Component {
   render() {
     return (
       <div className='login-container'>
-        <img src={Camera} />
+        <img alt='camera-icon' src={Camera} />
         <h3>Welcome to Instagram </h3>
         <div className='login-form'>
           <form>
