@@ -4,11 +4,12 @@ import PostContainer from './PostContainer';
 import Search from '../SearchBar/Search';
 
 class ImagesPage extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       instaPosts: [],
-      filteredInstaPosts: []
+      filteredInstaPosts: [],
+      searchTerm: ''
     }
   }
 
@@ -18,7 +19,7 @@ class ImagesPage extends React.Component {
 
   searchHandler = event => {
     const filteredArray = this.state.instaPosts.filter(post => {
-      if(post.username.includes(event.target.value)) {
+      if(post.username.includes(this.state.searchTerm)) {
         return post
       }
       else {
@@ -28,12 +29,24 @@ class ImagesPage extends React.Component {
     this.setState({filteredInstaPosts: filteredArray})
   }
 
+  onChangeHandler = event => {
+      this.setState({ searchTerm: event.target.value});
+      this.searchHandler();
+  }
+
+  logout = event => {
+    localStorage.clear();
+    window.location.reload();
+  }
+
   render() {
     return(
       <div className='App'>
         <Search
           searchTerm={this.state.searchTerm}
-          searchPosts={this.searchHandler} />
+          onChangeHandler={this.onChangeHandler}
+          logout={this.logout}
+          />
         <PostContainer
           instaPosts={
             this.state.filteredInstaPosts.length > 0

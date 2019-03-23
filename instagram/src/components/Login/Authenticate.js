@@ -25,6 +25,7 @@ const Authenticate = ImagesPage => Login => {
       return <Login />
     }
   }
+  return Authenticator;
 };
 
 export default Authenticate;

@@ -13,9 +13,13 @@ const Search = props => {
     <div className='search-container'>
       <div className='ig-logos'>
         <img className='camera' alt='camera logo' src={Camera} />
-        <img className='logo' alt='insta logo' src={InstaLogo} />
+        <img className='logo' alt='insta logo' src={InstaLogo} onClick={props.logout}/>
       </div>
-        <input className='search-input' name='searchTerm' type='text' value={props.searchTerm} placeholder='Search' onChange={props.searchHandler} />
+        <input
+          className='search-input'
+          type='text'
+          value= {props.searchTerm}
+          placeholder='Search' onChange={props.onChangeHandler} />
       <div className='icon-container'>
         <img className='search-icons' alt='compass' src={Compass} />
         <img className='search-icons' alt='heart' src={Heart} />

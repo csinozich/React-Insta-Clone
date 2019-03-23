@@ -1,6 +1,10 @@
-import './login.css';
 import React from 'react';
-import Camera from '../../images/camera.svg'
+import Camera from '../../images/camera.svg';
+import styled from 'styled-components';
+
+const LoginWrapper = styled.div`
+  height:
+`;
 
 class Login extends React.Component {
   constructor(props) {
